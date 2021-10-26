@@ -1,14 +1,14 @@
-class Airport {
+'use strict';
 
-    land(plane) {
-        return plane;
-        // plane gets added to an array of planes
+
+class Airport{
+    constructor() {
+      this._hangar = []
     }
-
-    takeoff(plane) {
-        // return `${plane} no longer in the airport`;
-        return "Plane no longer in the airport";
-        // plane is removed from the array of planes
+    planes() {
+      return this._hangar;
     }
-
-}
+    clearForLanding(plane) {
+      this._hangar.push(plane);
+    };
+  };
